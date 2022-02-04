@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://az764295.vo.msecnd.net/insider/5554b12acf27056905806867f251c859323ff7e9/code-insider-x64-1643824057.tar.gz -> vscode-bin-1.64.0_p1643823756.tar.gz"
+SRC_URI="https://az764295.vo.msecnd.net/insider/62de8dc3f78b8bef1eb62deeb093164a8d76c254/code-insider-x64-1643976479.tar.gz -> vscode-bin-1.65.0_p1643976204.tar.gz"
 RESTRICT="mirror strip bindist"
 LICENSE="
 	Apache-2.0
