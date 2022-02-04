@@ -7,5 +7,4 @@ LICENSE=GPL-2+
 RDEPEND=app-xemacs/mule-base app-xemacs/latin-euro-standards app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/mule-ucs-1.21-pkg.tar.gz
-_eclasses_=xemacs-packages	8a2518fc5877625acb8dc6c7c7c0e76c
 _md5_=14098083b2358aab0b85558ceedcb610
