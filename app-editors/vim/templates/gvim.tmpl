@@ -3,7 +3,7 @@
 EAPI=7
 VIM_VERSION="$(ver_cut 1-2)"
 PYTHON_COMPAT=( {{python_compat}} )
-inherit eutils vim-doc flag-o-matic fdo-mime gnome2-utils bash-completion-r1 prefix python-single-r1
+inherit eutils vim-doc flag-o-matic fdo-mime gnome3-utils bash-completion-r1 prefix python-single-r1 desktop
 
 DESCRIPTION="GUI version of the Vim text editor"
 HOMEPAGE="http://www.vim.org/ https://github.com/vim/vim"
@@ -206,7 +206,7 @@ src_configure() {
 	# gvim's GUI preference order is as follows:
 	# aqua					 CARBON (not tested)
 	# -aqua gtk3				GTK3
-	# -aqua -gtk3 gnome		   GNOME2
+	# -aqua -gtk3 gnome		   GNOME3
 	# -aqua -gtk3 -gnome gtk	   GTK2
 	# -aqua -gtk -gtk3 motif	   MOTIF
 	# -aqua -gtk -gtk3 -motif neXt  NEXTAW
@@ -226,7 +226,7 @@ src_configure() {
 		myconf+=( --enable-gtk2-check )
 		if use gnome ; then
 			einfo "Building gvim with the Gnome 2 GUI"
-			myconf+=( --enable-gui=gnome2 )
+			myconf+=( --enable-gui=gnome3 )
 		else
 			einfo "Building gvim with the gtk+-2 GUI"
 			myconf+=( --enable-gui=gtk2 )
@@ -368,7 +368,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 
 	# Update icon cache
-	gnome2_icon_cache_update
+	gnome3_icon_cache_update
 
 	# Make convenience symlinks
 	update_vim_symlinks
@@ -382,7 +382,7 @@ pkg_postrm() {
 	fdo-mime_desktop_database_update
 
 	# Update icon cache
-	gnome2_icon_cache_update
+	gnome3_icon_cache_update
 
 	# Make convenience symlinks
 	update_vim_symlinks
