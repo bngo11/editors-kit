@@ -5,12 +5,12 @@ EAPI=7
 inherit desktop eutils pax-utils xdg
 
 MY_INSTALL_DIR="/opt/${PN}"
-MY_EXEC="code"
+MY_EXEC="code-insiders"
 MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://az764295.vo.msecnd.net/stable/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/code-stable-x64-1651842173.tar.gz -> vscode-bin-1.67.1.tar.gz"
+SRC_URI="https://az764295.vo.msecnd.net/insider/17c75e11805103026b943c8dc4d50a35f245f76f/code-insider-x64-1653025082.tar.gz -> vscode-bin-1.68.0_p1653024833.tar.gz"
 RESTRICT="mirror strip bindist"
 LICENSE="
 	Apache-2.0
@@ -31,7 +31,7 @@ LICENSE="
 	UoI-NCSA
 	W3C"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS=""
 IUSE="libsecret hunspell"
 DEPEND=""
 RDEPEND="
