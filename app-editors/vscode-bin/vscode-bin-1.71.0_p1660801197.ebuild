@@ -5,12 +5,12 @@ EAPI=7
 inherit desktop eutils pax-utils xdg
 
 MY_INSTALL_DIR="/opt/${PN}"
-MY_EXEC="code"
+MY_EXEC="code-insiders"
 MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code-stable-x64-1659589559.tar.gz -> vscode-bin-1.70.0.tar.gz"
+SRC_URI="https://az764295.vo.msecnd.net/insider/f5c96e2db885f43fe1adb4a6ebbdfecf095430a8/code-insider-x64-1660801502.tar.gz -> vscode-bin-1.71.0_p1660801197.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -31,7 +31,7 @@ LICENSE="
 	UoI-NCSA
 	W3C"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS=""
 IUSE="libsecret hunspell"
 DEPEND=""
 RDEPEND="
@@ -114,8 +114,6 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/resources/app/out/vs/base/node/ps.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/out/vs/base/node/terminateProcess.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh"
-	fperms +x "${MY_INSTALL_DIR}/swiftshader/libEGL.so"
-	fperms +x "${MY_INSTALL_DIR}/swiftshader/libGLESv2.so"
 	insinto "/usr/share/licenses/${PN}"
 	newins "resources/app/LICENSE.rtf" "LICENSE.rtf"
 }
