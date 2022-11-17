@@ -8,6 +8,6 @@ LICENSE=Apache-2.0 BSD BSD-1 BSD-2 BSD-4 CC-BY-4.0 ISC LGPL-2.1+ Microsoft MIT M
 RDEPEND=hunspell? ( app-text/hunspell ) libsecret? ( app-crypt/libsecret[crypt] ) app-accessibility/at-spi2-atk dev-libs/nss media-libs/alsa-lib media-libs/libpng:0/16 x11-libs/cairo >=x11-libs/gtk+-3.0 x11-libs/libnotify x11-libs/libxkbcommon x11-libs/libxkbfile x11-libs/libXScrnSaver x11-libs/libXtst x11-libs/pango
 RESTRICT=strip bindist
 SLOT=0
-SRC_URI=https://az764295.vo.msecnd.net/insider/544f1cab668d6e8125e25574bedfc23394ca9a82/code-insider-x64-1668626886.tar.gz -> vscode-bin-1.74.0_p1668626390.tar.gz
+SRC_URI=https://az764295.vo.msecnd.net/insider/d9a70c4236a8bde4fe7435df3ecdd333c7bc939c/code-insider-x64-1668664362.tar.gz -> vscode-bin-1.74.0_p1668664073.tar.gz
 _eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	pax-utils	db85a3c508cf82c45f24b2723791cc93	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=e456ff38b256445f8bd311b038ec0979
+_md5_=092ba6c49b8bd1e2f7627a60f524b33e
