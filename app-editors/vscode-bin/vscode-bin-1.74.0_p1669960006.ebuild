@@ -2,7 +2,7 @@
 
 EAPI=7
 
-inherit desktop eutils pax-utils xdg
+inherit bash-completion-r1 desktop eutils pax-utils xdg
 
 MY_INSTALL_DIR="/opt/${PN}"
 MY_EXEC="code-insiders"
@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://az764295.vo.msecnd.net/insider/8b9891739b703b50547f506a7e2bc9565e52beff/code-insider-x64-1669707077.tar.gz -> vscode-bin-1.74.0_p1669706790.tar.gz"
+SRC_URI="https://az764295.vo.msecnd.net/insider/493a541735b84de36b628750ba716a430669cb7f/code-insider-x64-1669960289.tar.gz -> vscode-bin-1.74.0_p1669960006.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -32,7 +32,7 @@ LICENSE="
 	W3C"
 SLOT="0"
 KEYWORDS=""
-IUSE="libsecret hunspell"
+IUSE="libsecret hunspell zsh-completion"
 DEPEND=""
 RDEPEND="
 	hunspell? ( app-text/hunspell )
@@ -69,6 +69,32 @@ pkg_setup() {
 	S="${WORKDIR}/VSCode-linux-x64"
 }
 
+src_prepare() {
+	default
+
+
+	pushd resources/completions
+
+	pushd bash
+	mv "${MY_EXEC}" code || die "bash completion file not found"
+	popd
+
+	if use zsh-completion; then
+		pushd zsh
+		mv _"${MY_EXEC}" _code || die "zsh completion file not found"
+		popd
+	fi
+
+	popd
+
+	sed -i "s/${MY_EXEC}/code/g" resources/completions/bash/code || die "failed to replace in bash completion file"
+
+	if use zsh-completion; then
+		sed -i "s/${MY_EXEC}/code/g" resources/completions/zsh/_code || die "failed to replace in zsh completion file"
+	fi
+
+}
+
 src_install() {
 	pax-mark m "${MY_INSTALL_DIR}/${MY_EXEC}"
 	insinto "${MY_INSTALL_DIR}"
@@ -78,12 +104,16 @@ src_install() {
 	domenu ${FILESDIR}/${PN}.desktop
 	newicon ${S}/resources/app/resources/linux/code.png ${PN}.png
 
+	dosym "${MY_INSTALL_DIR}"/bin/"${MY_EXEC}" "/usr/bin/code"
+
 	fperms +x "${MY_INSTALL_DIR}/${MY_EXEC}"
+	fperms +x "${MY_INSTALL_DIR}/bin/${MY_EXEC}"
+
 	fperms 4755 "${MY_INSTALL_DIR}/chrome-sandbox"
 
-    if [ -e "${ED}"/"${MY_INSTALL_DIR}"/chrome_crashpad_handler ]; then
-        fperms 4755 "${MY_INSTALL_DIR}"/chrome_crashpad_handler
-    fi
+	if [ -e "${ED}"/"${MY_INSTALL_DIR}"/chrome_crashpad_handler ]; then
+		fperms 4755 "${MY_INSTALL_DIR}"/chrome_crashpad_handler
+	fi
 
 	fperms +x "${MY_INSTALL_DIR}/libEGL.so"
 	fperms +x "${MY_INSTALL_DIR}/libGLESv2.so"
@@ -118,6 +148,13 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/resources/app/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh"
 	insinto "/usr/share/licenses/${PN}"
 	newins "resources/app/LICENSE.rtf" "LICENSE.rtf"
+
+	newbashcomp resources/completions/bash/code code
+
+	if use zsh-completion; then
+		insinto /usr/share/zsh/site-functions
+		doins "${S}"/resources/completions/zsh/_code
+	fi
 }
 
 pkg_postinst() {
