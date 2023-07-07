@@ -6,8 +6,7 @@ inherit cargo
 
 DESCRIPTION="A complete text editor for your terminal"
 HOMEPAGE="https://github.com/jmacdonald/amp"
-SRC_URI="https://github.com/jmacdonald/amp/tarball/1485e4b25757df22f53af8109c39b6197c61de5a -> amp-0.6.2-1485e4b.tar.gz
-https://direct.funtoo.org/a8/37/2e/a8372e082c1424a8f35d9e80cc3e7c0dd4aa5630771b47617788782c92770e65077f39856d79a0a9f390a8b9032510664d97ecb19cf3c141e5f2d3741d426e71 -> amp-0.6.2-funtoo-crates-bundle-9353a5b47bc891623783f3a0433a9a798ddf84c26a1a71860a45982f8c567d2e9d989a5804de80e53807db54e15238932ce5fb7ce88f03a0d92e0ae2f517de98.tar.gz"
+SRC_URI="https://github.com/jmacdonald/amp/tarball/1485e4b25757df22f53af8109c39b6197c61de5a -> amp-0.6.2-1485e4b.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
