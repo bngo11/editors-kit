@@ -5,3 +5,5 @@ amp:
         github:
           user: jmacdonald
           query: releases
+        extensions:
+          - rust
