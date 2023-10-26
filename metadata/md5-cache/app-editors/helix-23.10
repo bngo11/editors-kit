@@ -1,0 +1,12 @@
+BDEPEND=>=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install postinst test unpack
+DESCRIPTION=A post-modern modal text editor
+EAPI=7
+HOMEPAGE=https://github.com/helix-editor/helix
+IUSE=doc debug
+KEYWORDS=*
+LICENSE=MPL-2.0
+SLOT=0
+SRC_URI=https://github.com/helix-editor/helix/tarball/baf8ea8de3ff9cf8f01278e389c01db4c0d19e00 -> helix-23.10-baf8ea8.tar.gz https://direct.funtoo.org/f5/1f/06/f51f067e8784e7837bdc4fc29252f0b60f6865554cae0f4ccd5c32bb2c3e5161dff1154ecd6627bd69363e10b2c13f279a1504e9e17c3773751fa834edcc7a5a -> helix-23.10-funtoo-crates-bundle-26dd90d0fae58af9b8c8cbe369c54ff317dc554e9128b7fa50e05901fd733e63708dbb27364210470ff3b2747de5ce03a4f1cf27c2341ff4cfdf4cc74499dd7f.tar.gz
+_eclasses_=cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=31d5b7b379f0d5d9e0125b90877325b4
