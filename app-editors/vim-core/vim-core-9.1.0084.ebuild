@@ -6,7 +6,7 @@ inherit bash-completion-r1 desktop flag-o-matic prefix vim-doc xdg-utils
 
 DESCRIPTION="Vim and GVim shared files"
 HOMEPAGE="http://www.vim.org/ https://github.com/vim/vim"
-SRC_URI="https://github.com/vim/vim/archive/v9.1.0061/v9.1.0061.tar.gz -> vim-9.1.0061.tar.gz"
+SRC_URI="https://github.com/vim/vim/archive/v9.1.0084/v9.1.0084.tar.gz -> vim-9.1.0084.tar.gz"
 S=${WORKDIR}/vim-${PV}
 
 SLOT="0"
