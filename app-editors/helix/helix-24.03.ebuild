@@ -7,7 +7,7 @@ inherit cargo
 DESCRIPTION="A post-modern modal text editor"
 HOMEPAGE="https://github.com/helix-editor/helix"
 SRC_URI="https://github.com/helix-editor/helix/tarball/e027942d42d9ba17c612948785ca743a9e80488f -> helix-24.03-e027942.tar.gz
-https://direct.funtoo.org/80/42/57/8042571010fbc9a1879e5088f5f94352bf27b32eb968e071fb0cde321cbf9d121b17ab141a1ad211323fd59e2f8d0f7cc3edd3db19c73993cae60a264173b1e5 -> helix-24.03-funtoo-crates-bundle-3cc54e9d9f461ccce665ca94c388c68b82cbec462a3305223498251c3d39140c663100e8c8f65b633211212bdc426c3cf35b3a7bb10da69fdb1d9fac8a2d2f35.tar.gz"
+https://direct.funtoo.org/50/14/b1/5014b1419beb2f19a69e7b8212b4ab98ad17fc423529f442722cc214590c759d9ea6c684ee1ea69549fac4aaed56cfa581149522d9786a8dce7ee3317c53eb1b -> helix-24.03-funtoo-crates-bundle-3cc54e9d9f461ccce665ca94c388c68b82cbec462a3305223498251c3d39140c663100e8c8f65b633211212bdc426c3cf35b3a7bb10da69fdb1d9fac8a2d2f35.tar.gz"
 
 LICENSE="MPL-2.0"
 SLOT="0"
