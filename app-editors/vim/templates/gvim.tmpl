@@ -5,6 +5,7 @@ VIM_VERSION="$(ver_cut 1-2)"
 LUA_COMPAT=( lua5-{1..4} luajit )
 PYTHON_COMPAT=( {{python_compat}} )
 PYTHON_REQ_USE="threads(+)"
+DISTUTILS_USE_PEP517=setuptools
 
 inherit bash-completion-r1 flag-o-matic lua-single prefix python-single-r1 ruby-single toolchain-funcs vim-doc xdg-utils
 

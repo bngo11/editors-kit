@@ -5,6 +5,7 @@ VIM_VERSION="$(ver_cut 1-2)"
 LUA_COMPAT=( lua5-{1..4} luajit )
 PYTHON_COMPAT=( python2+ )
 PYTHON_REQ_USE="threads(+)"
+DISTUTILS_USE_PEP517=setuptools
 USE_RUBY="ruby27 ruby30 ruby31 ruby32"
 
 inherit vim-doc flag-o-matic fdo-mime bash-completion-r1 python-single-r1 \
@@ -12,7 +13,7 @@ inherit vim-doc flag-o-matic fdo-mime bash-completion-r1 python-single-r1 \
 
 DESCRIPTION="Vim, an improved vi-style text editor"
 HOMEPAGE="http://www.vim.org/ https://github.com/vim/vim"
-SRC_URI="https://github.com/vim/vim/archive/v9.1.0686/v9.1.0686.tar.gz -> vim-9.1.0686.tar.gz"
+SRC_URI="https://github.com/vim/vim/archive/v9.1.0702/v9.1.0702.tar.gz -> vim-9.1.0702.tar.gz"
 
 SLOT="0"
 LICENSE="vim"
