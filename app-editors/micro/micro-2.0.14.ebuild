@@ -112,8 +112,8 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="https://github.com/zyedidia/micro/tarball/68d88b571de6dca9fb8f03e2a3caafa2287c38d4 -> micro-2.0.13-68d88b5.tar.gz
-https://direct.funtoo.org/86/e1/a9/86e1a9ba9a74f2d25c7c94637ae31669e43e2ecaff6f6ca0ed84e9525022f69832977f0366a794fc176e13bc03b2435013183521a55797221621436570227374 -> micro-2.0.13-funtoo-go-bundle-7fb055b80974ebb8558c28999de2782684a64a9f83c447ead70ce38f1a896b116c9b42103b3b427665722e1345317eaf5faa6e179f93122c3d70e79c63837196.tar.gz"
+SRC_URI="https://github.com/zyedidia/micro/tarball/7685fb9770b27ce2ea2ef94a7e6588ec9cb23ae9 -> micro-2.0.14-7685fb9.tar.gz
+https://direct.funtoo.org/59/fe/c9/59fec95023f69c9f7d90fa3fe72f3b5715f052e120645a9f2a992374bb011f2de780b4128d13ddc7815b89e9033c825bf69fe4070e143e9aaced99a89d5d1c06 -> micro-2.0.14-funtoo-go-bundle-7fb055b80974ebb8558c28999de2782684a64a9f83c447ead70ce38f1a896b116c9b42103b3b427665722e1345317eaf5faa6e179f93122c3d70e79c63837196.tar.gz"
 
 DESCRIPTION="A modern and intuitive terminal-based text editor"
 HOMEPAGE="https://micro-editor.github.io https://github.com/zyedidia/micro"
