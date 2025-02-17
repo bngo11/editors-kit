@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/code-stable-x64-1736989961.tar.gz -> vscode-bin-1.96.4.tar.gz"
+SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/e54c774e0add60467559eb0d1e229c6452cf8447/code-stable-x64-1739405584.tar.gz -> vscode-bin-1.97.2.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -107,6 +107,8 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/git/dist/ssh-askpass.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/w32appcontainertokens-LVKSWXR7.node"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/terminal-suggest/scripts/clone-fig.sh"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/terminal-suggest/scripts/update-specs.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@parcel/watcher/build/Release/watcher.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@vscode/deviceid/build/Release/windows.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@vscode/policy-watcher/build/Release/vscode-policy-watcher.node"
