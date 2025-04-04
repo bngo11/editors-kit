@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/ddc367ed5c8936efe395cffeec279b04ffd7db78/code-stable-x64-1741787903.tar.gz -> vscode-bin-1.98.2.tar.gz"
+SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/4437686ffebaf200fa4a6e6e67f735f3edf24ada/code-stable-x64-1743631306.tar.gz -> vscode-bin-1.99.0.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -107,12 +107,6 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/git/dist/ssh-askpass.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/w32appcontainertokens-LVKSWXR7.node"
-	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/terminal-suggest/fixtures/shell-parser/basic/input.sh"
-	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/terminal-suggest/fixtures/shell-parser/multipleStatements/input.sh"
-	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/terminal-suggest/fixtures/shell-parser/primaryExpressions/input.sh"
-	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/terminal-suggest/fixtures/shell-parser/variables/input.sh"
-	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/terminal-suggest/scripts/clone-fig.sh"
-	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/terminal-suggest/scripts/update-specs.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@parcel/watcher/build/Release/watcher.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@vscode/deviceid/build/Release/windows.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@vscode/policy-watcher/build/Release/vscode-policy-watcher.node"
