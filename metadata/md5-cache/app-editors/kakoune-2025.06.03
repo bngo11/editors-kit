@@ -8,6 +8,6 @@ KEYWORDS=*
 LICENSE=Unlicense
 RDEPEND=sys-libs/ncurses:0=
 SLOT=0
-SRC_URI=https://github.com/mawww/kakoune/releases/download/v2024.05.18/kakoune-2024.05.18.tar.bz2 -> kakoune-2024.05.18.tar.bz2
+SRC_URI=https://github.com/mawww/kakoune/releases/download/v2025.06.03/kakoune-2025.06.03.tar.bz2 -> kakoune-2025.06.03.tar.bz2
 _eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=d8139be88b5535f37fdc4608f67f14f9
+_md5_=487c1bad7da886c4108a051c61194a6e
