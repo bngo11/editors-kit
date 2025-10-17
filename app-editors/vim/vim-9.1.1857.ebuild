@@ -56,7 +56,7 @@ DEPEND="${RDEPEND}
 PDEPEND="!minimal? ( app-vim/gentoo-syntax )"
 PATCHES=(
 	"${FILESDIR}/vim-6.3-xorg-75816.patch"
-	"${FILESDIR}/vim-7.3-apache-83565.patch"
+	"${FILESDIR}/vim-9.1-apache-83565.patch"
 	"${FILESDIR}/vim-7.0-automake-substitutions-93378.patch"
 	"${FILESDIR}/vim-7.0-grub-splash-96155.patch"
 	"${FILESDIR}/vim-7.1-ada-default-compiler.patch"
