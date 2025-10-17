@@ -1,0 +1,12 @@
+--- a/runtime/filetype.vim	2025-10-17 07:47:37.108929078 -0500
++++ b/runtime/filetype.vim	2025-10-17 07:48:28.435264224 -0500
+@@ -81,6 +81,9 @@
+ au BufNewFile,BufRead .htaccess,*/etc/httpd/*.conf		setf apache
+ au BufNewFile,BufRead */etc/apache2/sites-*/*.com		setf apache
+ 
++" Gentoo apache config file locations (Gentoo bug #83565)
++au BufNewFile,BufRead /etc/apache2/{modules,vhosts}.d/*.conf call s:StarSetf('apache')
++
+ " ALSA configuration
+ au BufNewFile,BufRead .asoundrc,*/usr/share/alsa/alsa.conf,*/etc/asound.conf setf alsaconf
+ 
