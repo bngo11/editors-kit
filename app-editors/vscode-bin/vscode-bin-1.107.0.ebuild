@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/code-stable-x64-1764110803.tar.gz -> vscode-bin-1.106.3.tar.gz"
+SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/618725e67565b290ba4da6fe2d29f8fa1d4e3622/code-stable-x64-1765353460.tar.gz -> vscode-bin-1.107.0.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -105,6 +105,8 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/git/dist/git-editor.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/git/dist/ssh-askpass-empty.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/git/dist/ssh-askpass.sh"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/microsoft-authentication/dist/libmsalruntime.so"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/microsoft-authentication/dist/msal-node-runtime.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/win32-app-container-tokens.win32-arm64-msvc-4ZJZ3U55.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/win32-app-container-tokens.win32-x64-msvc-VCQE7GJP.node"
