@@ -1,13 +1,14 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
+WANT_AUTOCONF=2.73
 VIM_VERSION="$(ver_cut 1-2)"
 LUA_COMPAT=( lua5-{1..4} luajit )
 PYTHON_COMPAT=( python2+ )
 PYTHON_REQ_USE="threads(+)"
 DISTUTILS_USE_PEP517=setuptools
 
-inherit bash-completion-r1 flag-o-matic lua-single prefix python-single-r1 ruby-single toolchain-funcs vim-doc xdg-utils
+inherit bash-completion-r1 flag-o-matic lua-single prefix python-single-r1 ruby-single toolchain-funcs vim-doc xdg-utils autotools
 
 DESCRIPTION="GUI version of the Vim text editor"
 HOMEPAGE="http://www.vim.org/ https://github.com/vim/vim"
