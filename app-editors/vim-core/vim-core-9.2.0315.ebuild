@@ -1,9 +1,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-WANT_AUTOCONF=2.73
 VIM_VERSION="$(ver_cut 1-2)"
-inherit bash-completion-r1 desktop flag-o-matic prefix vim-doc xdg-utils autotools
+inherit bash-completion-r1 desktop flag-o-matic prefix vim-doc xdg-utils
 
 DESCRIPTION="Vim and GVim shared files"
 HOMEPAGE="http://www.vim.org/ https://github.com/vim/vim"
