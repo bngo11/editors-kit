@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/560a9dba96f961efea7b1612916f89e5d5d4d679/code-stable-x64-1776214075.tar.gz -> vscode-bin-1.116.0.tar.gz"
+SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/034f571df509819cc10b0c8129f66ef77a542f0e/code-stable-x64-1777474884.tar.gz -> vscode-bin-1.118.1.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -99,7 +99,6 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/libGLESv2.so"
 	fperms +x "${MY_INSTALL_DIR}/libffmpeg.so"
 	fperms +x "${MY_INSTALL_DIR}/libvk_swiftshader.so"
-	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/prebuilds/linux-x64/pty.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/ripgrep/bin/linux-x64/rg"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/git/dist/askpass-empty.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/git/dist/askpass.sh"
@@ -112,7 +111,6 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/win32-app-container-tokens.win32-arm64-msvc-4ZJZ3U55.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/win32-app-container-tokens.win32-x64-msvc-VCQE7GJP.node"
-	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@github/copilot/prebuilds/linux-x64/pty.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@parcel/watcher/build/Release/watcher.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@vscode/deviceid/build/Release/windows.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@vscode/native-watchdog/build/Release/watchdog.node"
