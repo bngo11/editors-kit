@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/6928394f91b684055b873eecb8bc281365131f1c/code-stable-x64-1781225422.tar.gz -> vscode-bin-1.124.2.tar.gz"
+SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/fcf604774b9f2674b473065736ee75077e256353/code-stable-x64-1781859485.tar.gz -> vscode-bin-1.125.1.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -99,6 +99,8 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/libGLESv2.so"
 	fperms +x "${MY_INSTALL_DIR}/libffmpeg.so"
 	fperms +x "${MY_INSTALL_DIR}/libvk_swiftshader.so"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/prebuilds/linux-x64/cli-native.node"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/prebuilds/linux-x64/computer.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/prebuilds/linux-x64/pty.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/prebuilds/linux-x64/runtime.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/ripgrep/bin/linux-x64/rg"
@@ -113,6 +115,7 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/win32-app-container-tokens.win32-arm64-msvc-4ZJZ3U55.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/ms-vscode.js-debug/src/win32-app-container-tokens.win32-x64-msvc-VCQE7GJP.node"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@github/copilot/prebuilds/linux-x64/pty.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@github/copilot/prebuilds/linux-x64/runtime.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@parcel/watcher/build/Release/watcher.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@vscode/deviceid/build/Release/windows.node"
