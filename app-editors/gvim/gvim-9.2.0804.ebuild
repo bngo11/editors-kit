@@ -11,7 +11,7 @@ inherit bash-completion-r1 flag-o-matic lua-single prefix python-single-r1 ruby-
 
 DESCRIPTION="GUI version of the Vim text editor"
 HOMEPAGE="http://www.vim.org/ https://github.com/vim/vim"
-SRC_URI="https://github.com/vim/vim/archive/v9.2.0782/v9.2.0782.tar.gz -> vim-9.2.0782.tar.gz"
+SRC_URI="https://github.com/vim/vim/archive/v9.2.0804/v9.2.0804.tar.gz -> vim-9.2.0804.tar.gz"
 S="${WORKDIR}"/vim-${PV}
 
 SLOT="0"
