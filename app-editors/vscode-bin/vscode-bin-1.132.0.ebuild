@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/code-stable-x64-1785237707.tar.gz -> vscode-bin-1.131.0.tar.gz"
+SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/df53daabb18cd157bdb08c7f01c34df936cf12f4/code-stable-x64-1785859845.tar.gz -> vscode-bin-1.132.0.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -99,6 +99,7 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/libGLESv2.so"
 	fperms +x "${MY_INSTALL_DIR}/libffmpeg.so"
 	fperms +x "${MY_INSTALL_DIR}/libvk_swiftshader.so"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/prebuilds/linux-x64/cli-native.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/prebuilds/linux-x64/runtime.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/copilot/node_modules/@github/copilot/sdk/ripgrep/bin/linux-x64/rg"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/extensions/git/dist/askpass-empty.sh"
