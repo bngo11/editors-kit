@@ -10,7 +10,7 @@ MY_PN=${PN/-bin/}
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/07f806f999227108933c2e30515b26eecc1fda74/code-stable-x64-1790759436.tar.gz -> vscode-bin-1.140.0.tar.gz"
+SRC_URI="https://vscode.download.prss.microsoft.com/dbazure/download/stable/2a59476c9bfcb90b3ddc372c36762471b7dfad1c/code-stable-x64-1791276637.tar.gz -> vscode-bin-1.141.0.tar.gz"
 RESTRICT="strip bindist"
 LICENSE="
 	Apache-2.0
@@ -116,6 +116,7 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/vsda/build/Release/vsda.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules.asar.unpacked/@github/copilot-sdk-linux-x64/prebuilds/linux-x64/runtime.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules.asar.unpacked/@github/copilot-sdk-linux-x64/ripgrep/bin/linux-x64/rg"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules.asar.unpacked/@microsoft/mxc-sdk/bin/x64/libmxc_ffi.so"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules.asar.unpacked/@parcel/watcher/build/Release/watcher.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules.asar.unpacked/@vscode/deviceid/build/Release/windows.node"
 	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules.asar.unpacked/@vscode/native-watchdog/build/Release/watchdog.node"
